@@ -1,5 +1,13 @@
 library(tidyverse)
 
+
+# Code for an Olympics 2021 sweepstake. Each participant puts an amount into a
+# pot equal to the total number of gold medals handed out, divided by the
+# number of participants (so the pot equals the total number of golds).
+# All countries are divided randomly between participants, and the amount each
+# person gets back from the pot equals the number of golds won by their teams.
+
+
 # Part 1 of 2: assign countries to participants --------------------------------
 
 # Names of participants.
@@ -255,7 +263,7 @@ for (person in people) {
 # Part 2 of 2: calculate how much each person has won or lost ------------------
 
 # 2016 winners from https://en.wikipedia.org/wiki/2016_Summer_Olympics_medal_table
-# as an example for testing
+# as an example for testing. This csv is in the same repo as this code.
 df_winners <- read_csv("sweepstake_2021_olympics_2016_results_as_example.csv") %>%
   select(country, Gold) 
 
